@@ -4,21 +4,21 @@ Julia Hedrick
 Ben Solomon
 
 # COMP20 Project Proposal
-##Web Programming, Ming Chow
+## Web Programming, Ming Chow
 
-###Project title
+### Project title
 
 Job-os
 
-###Problem statement
+### Problem statement
 
 Tufts students do not have access to reliable information about on-campus jobs and opportunities. The current database (JobX) is limited in scope and data, providing only few details for open positions.
 
-###How do you solve the problem?
+### How do you solve the problem?
 
 “Glassdoor for on-campus jobs.” We plan to replace the current Tufts job portal with a more dynamic platform. By creating an accessible and useful system, we believe more people will become engaged in job searches. This increased use will make the job portal more effective for employers and students. Ideally, we hope to expand this platform to other campuses as well. Our features (listed below) will help accomplish this.
-
-###Features
+ 
+### Features
 
 Job-os will include many features to improve the job-search experience, including:
 
@@ -41,11 +41,11 @@ Job-os will include many features to improve the job-search experience, includin
 		+ Reviews automatically ask for the search criteria above (average pay, etc.) so that searches will have accurate data
 
 
-###Data
+### Data
 
 Our prototype will collect data about each on-campus job. This data is twofold: first, we will store general information about the job’s location, hourly pay, department, and more. We will separately store a collection of user reviews with the search criteria listed above. The basic job data will be reflected on each listing, while user comments will be shown at the bottom of the page and rating averages will appear in various locations.
 
-###Algorithms and Special Techniques
+### Algorithms and Special Techniques
 
 Many of the techniques we will use are from course material. Assignment 2 already covered the Google Maps API, and in the future our class will learn the basics of permanently storing data for a website. These are both essential parts of the project. We do not anticipate using specialized techniques or complex algorithms to build Job-os.
 
@@ -53,25 +53,25 @@ Where necessary, we will perform simple rankings based on user feedback. These w
 
 
 
-##Electronic Mockups
+## Electronic Mockups
 
 Home Page
-![](images/wf_1)
+![](images/wf_1.png)
 
 After Click on Job Link
-![](images/wf_2)
+![](images/wf_2.png)
 
 Search for a Job
-![](images/wf_3)
+![](images/wf_3.png)
 
 Review a Job tab
-![](images/wf_4)
+![](images/wf_4.png)
 
 
 Map Page (before marker click)
-![](images/wf_5)
+![](images/wf_5.png)
 
 Map Page (after marker click)
-![](images/wf_6)
+![](images/wf_6.png)
 
 
