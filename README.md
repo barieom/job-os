@@ -1,10 +1,8 @@
-Team 6
-Barry Eom
-Julia Hedrick
-Ben Solomon
-
 # COMP20 Project Proposal
 ## Web Programming, Ming Chow
+
+### Team Six
+Barry Eom * Julia Hedrick * Ben Solomon
 
 ### Project title
 
@@ -54,9 +52,9 @@ Where necessary, we will perform simple rankings based on user feedback. These w
 
 
 ## Electronic Mockups
-
+=====================
 Home Page
-![](images/wf_1.png)
+![The design and aesthetics are subject to change](images/wf_1.png)
 
 After Click on Job Link
 ![](images/wf_2.png)
@@ -66,7 +64,6 @@ Search for a Job
 
 Review a Job tab
 ![](images/wf_4.png)
-
 
 Map Page (before marker click)
 ![](images/wf_5.png)
