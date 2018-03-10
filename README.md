@@ -1,3 +1,4 @@
+Team 6
 Barry Eom
 Julia Hedrick
 Ben Solomon
@@ -72,6 +73,5 @@ Map Page (before marker click)
 
 Map Page (after marker click)
 ![](images/wf_6)
-
 
 
