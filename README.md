@@ -52,9 +52,9 @@ Where necessary, we will perform simple rankings based on user feedback. These w
 
 
 ## Electronic Mockups
-=====================
+
 Home Page
-![The design and aesthetics are subject to change](images/wf_1.png)
+![](images/wf_1.png)
 
 After Click on Job Link
 ![](images/wf_2.png)
