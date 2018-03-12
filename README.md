@@ -72,3 +72,6 @@ Map Page (after marker click)
 ![](images/wf_6.png)
 
 
+## Comments by Ming
+* Yes, so yes.
+* I hope this will also have info and records of TA pay.  I always wonder how much we pay our TAs.
