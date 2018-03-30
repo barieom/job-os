@@ -4,7 +4,7 @@ function init() {
 	currentLoc  = new google.maps.LatLng(lat, long);
 
 	myMap = {
-		zoom:      10, 
+		zoom:      17, 
 		center:    currentLoc, 
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 	};
