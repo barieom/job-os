@@ -5,10 +5,11 @@
 	<title>Job-os: Find jobs!</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_index.css" />
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -23,27 +24,27 @@
     	});
     </script>
 </head>
-<body>
-	<nav class="navbar  navbar-light bg-primary">
+<body class="fixed-nav sticky-footer">
+	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
     	<a class="navbar-brand" href="#">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
 		</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+		<div class="collapse navbar-collapse .nav > ul > li" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto nav_word">
       			<li class="nav-item active">
-		 			<a class="nav-link" href="#">JOB-OS</a> 
+		 			<a class="nav-link nav_word" href="#">JOB-OS</a> 
 		 		</li>
 		 		<li class="nav-item">
-	      			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      			<a class="nav-link nav_word" href="#">Home <span class="sr-only">(current)</span></a>
 	      		</li>
 	      		<li class="nav-item">
-	     			<a class=" nav-link" href="#">Submit a review</a>
+	     			<a class=" nav-link nav_word" href="#">Submit a review</a>
 	     		</li>
 	     		<li class="nav-item">
-				    <a class="nav-link" href="#">Find a job</a>
+				    <a class="nav-link nav_word" href="#">Find a job</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-item nav-link" href="#">Map</a>
+					<a class="nav-item nav-link nav_word" href="#">Map</a>
 				</li>
 			</ul>
 	      <form class="form-inline">
@@ -53,14 +54,32 @@
 		</div>
 	</nav>
 
-	<div class="info">
-		<header>About JOB-OS</header>
-		<p>“Glassdoor for on-campus jobs.” Job-os is a unique platform that offers reliable job and internship information to Tufts University students. As a shared platform, everyone is able to contribute to this website with reviews of their on-campus job or internship experience.</p>
+	<div class="center">
+		<h1 style="font-weight:600;">Find a job or an internship best suited for you.</h1>
+	</div>
+	<div class="banner-search-area">
+		<div class="row align-items-center justify-content-center">
+			<form>
+				<div class="form-group"><div class="input-group col-lg-11">
+					<input class="form-control input-lg" id="job_info" type="text" placeholder="Search me...">
+				</div></div>
+			</form>
+		</div>
 	</div>
 
-	<div class="openjobs">Available Jobs
-	</div>
-	<div class="reviewedjobs">Reviewed Jobs
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="info span6">
+				<p>About JOB-OS</p>
+				<p>“Glassdoor for on-campus jobs.” Job-os is a unique platform that offers reliable job and internship information to Tufts University students. As a shared platform, everyone is able to contribute to this website with reviews of their on-campus job or internship experience.</p>
+			</div>
+			<div class="span6">
+				<div class="openjobs">Available Jobs
+				</div>
+				<div class="reviewedjobs">Reviewed Jobs
+				</div>
+			</div>
+		</div>
 	</div>
 
 </body>

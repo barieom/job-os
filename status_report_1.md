@@ -32,8 +32,10 @@ our MongoDB skills with Assignment 3 before continuing.
 What challenges and issues were faced during the week?
 
 We struggled to understand some of the job APIs we could use to gather job data.
-Because of this (and other factors), Job-os will have users directly submit
-listings for the website.
+We initially reasoned that we could try to access the job information via JobX, an 
+online job platform. However, after some attempts at locating an API for JobX, we
+were not able to find any. Because of this (and other factors), Job-os will have 
+users directly submit listings for the website--similar to ratemyprofessors.
 
 
 What are the goals for next week?

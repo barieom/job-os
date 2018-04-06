@@ -4,9 +4,39 @@ html, body {
   height: 100%;
   margin: 4;
   font-family: "Montserrat";
-  background-color: #7EbEDE;
+  background-color: #d4ebf2;
 }
 
 .searchtext {
 	color: #F0AEDE;
+}
+
+.nav_word {
+	color:white;
+	font-weight: bold;
+}
+
+.center {
+	margin:auto;
+	text-align:center;
+	padding: 100px 0;
+}
+
+.center_div{
+	margin: 0 auto;
+	width:100%;
+}
+
+#header .banner-area .banner-search-area .search-for-su::before {
+    background: rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -55px;
+    padding: 40px 55px;
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    z-index: 0;
 }
