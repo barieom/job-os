@@ -2,52 +2,95 @@
 <html>
 <head>
 	<link rel="shortcut icon" href="images/jobos_b.png">
-	<title>Review a Job</title>
+	<title>Job-os: Find jobs!</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_review.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script>
+    	$(document).ready(function() {
+    		$(":input").keypress(function(e) {
+    			if (e.which == 13) {
+                    var value = $( this ).val();
+                    console.log(value);
+                }
+            });
+    	});
+    </script>
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		    <div class="navbar-nav">
-		    	<a class="navbar-brand" href="#"/>
-	    		<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""> </a>
-				<a class="nav-item" href="#">JOB-OS</a> 
-				<form class="form-inline">
-				    <input class="form-control mr-sm-2" type="search" placeholder="Search for jobs..." aria-label="Search">
-				    <button class="btn btn-outline-success my-2 my-sm-0 searchtext" type="submit"><i class="fa fa-search"></i></button>
-				 </form>
-			      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-			      <a class="nav-item nav-link" href="#">Write a review</a>
-			      <a class="nav-item nav-link" href="#">Find a job</a>
-			      <a class="nav-item nav-link" href="#">Follow Us</a>
-		    </div>
-		  </div>
-        </nav>
-        
-        <div id="intro">
-                Job-os relies on accurate and thoughtful reviews from users. Please help us out by sharing a review of your job! Thank you.<br>
-        </div>
-        
-        <div class="rating-form">
-                <input class="form-control mr-sm-2" type="title" placeholder="Job title" aria-label="title">
-                <input class="form-control mr-sm-2" type="department" placeholder="Department" aria-label="department">
-                <input class="form-control mr-sm-2" type="rating" placeholder="Rating (1-5)" aria-label="rating">
-                <input class="form-control mr-sm-2" type="ws/standard" placeholder="Work study or standard" aria-label="ws/standard">
-                <input class="form-control mr-sm-2" type="coworker" placeholder="Co-worker rating (1-5)" aria-label="coworker">
-                <input class="form-control mr-sm-2" type="hours" placeholder="Hours/week" aria-label="hours">
-                <input class="form-control mr-sm-2" type="homework" placeholder="Can you do homework?" aria-label="homework">
-                <input class="form-control mr-sm-2" type="flexibility" placeholder="Schedule flexibility" aria-label="flexibility">
-                <input class="form-control mr-sm-2" type="other" placeholder="Other comments" aria-label="other">
-        </div>
-        
-        <button type="button" class="btn btn-secondary">Submit</button>
-        
+<body class="fixed-nav sticky-footer">
+	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
+    	<a class="navbar-brand" href="#">
+			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
+		</a>
+		<div class="collapse navbar-collapse .nav > ul > li" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto nav_word">
+      			<li class="nav-item active">
+		 			<a class="nav-link nav_word" href="#">JOB-OS</a> 
+		 		</li>
+		 		<li class="nav-item">
+	      			<a class="nav-link nav_word" href="index.html">Home <span class="sr-only">(current)</span></a>
+	      		</li>
+	      		<li class="nav-item">
+	     			<a class=" nav-link nav_word" href="reviewjob.html">Submit a review</a>
+	     		</li>
+	     		<li class="nav-item">
+				    <a class="nav-link nav_word" href="#">Find a job</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-item nav-link nav_word" href="map.html">Map</a>
+				</li>
+			</ul>
+	      <form class="form-inline">
+		    <input class="form-control mr-sm-2" type="search" placeholder="Search for jobs..." aria-label="Search">
+		    <button class="btn btn-outline-success my-2 my-sm-0 searchtext" type="submit"><i class="fa fa-search"></i></button>
+		 </form>
+		</div>
+	</nav>
+
+	<div class="center">
+		<h1 style="font-weight:600;">Submit a Review</h1>
+                <h3 style="font-weight:200;">Job-os relies on accurate and thoughtful reviews from users. Please help us by sharing a review of your job! Thank you.</h3>
+	</div>
+	<div class="banner-search-area">
+		<div class="row align-items-center justify-content-center">
+			<form>
+				<div class="form-group"><div class="input-group col-lg-13">
+					<input class="form-control input-lg" id="job_info" type="text" placeholder="Job title">
+				</div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Department">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Rating (1-5)">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Work study or standard">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Co-worker rating (1-5)">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Hours/week">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Can you do homework? (yes/no)">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Schedule flexibility (1-5)">
+                                </div></div>
+                                <div class="form-group"><div class="input-group col-lg-13">
+                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Other comments">
+                                </div></div>
+			</form>
+		</div>
+	</div>
+
 </body>
 </html>
