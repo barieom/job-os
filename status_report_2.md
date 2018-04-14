@@ -14,11 +14,17 @@ What was accomplished during the week?
 This week, we began to link the different pages of Job-os. After we switched to
 a new design last week, we spent recent days converting the remaining pages
 of the website. Most importantly, the navigation bar now allows users to
-browse what we have to offer. We have early versions of:
+browse what we have to offer. The "add a job" page was added, which allows 
+employers to add jobs that they are looking to fill. The forms on the review a 
+job and add a job pages were updated with submit buttons and dropdown options. 
+The dropdown options will help us to ensure the right information is being 
+submitted for fields where specific options are required.  We have early 
+versions of:
 
 -Home
--Review a Job
+-Review a Job (data is not yet being stored)
 -Find a Job (placeholder while we work on MongoDB)
+-Add a Job (data is not yet being recorded)
 -Map (still very early as we have not connected it to data)
 
 We also continued our discussion on MongoDB. After completing Assignment 3, all
@@ -43,4 +49,5 @@ Over the new week, we will finally start to add MongoDB into Job-bos. Our projec
 is fairly static at the moment because we have no data. But once we can
 dynamically add and remove job records, it will quickly become a useful tool.
 We will build a Mongo database, connect it to our project, and write the code
-necessary to let users interact with Job-bos.
+necessary to let users interact with Job-bos. Having stored data, the map page will
+be able to have markers of available jobs that include its rating and link to reviews. 
