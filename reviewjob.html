@@ -59,7 +59,7 @@
 
 	<div class="center">
 		<h1 style="font-weight:600;">Submit a Review</h1>
-                <h3 style="font-weight:200;">Job-os relies on accurate and thoughtful reviews from users. Please help us by sharing a review of your job! Thank you.</h3>
+                <h3 style="font-weight:200;">Job-os relies on accurate and thoughtful reviews from users. Please help us by sharing a review of your job! Please note: When rating, 1 is the worst and 5 is the best. Thank you.</h3>
 	</div>
 	<div class="banner-search-area">
 		<div class="row align-items-center justify-content-center">
@@ -71,26 +71,56 @@
                                         <input class="form-control input-lg" id="job_info" type="text" placeholder="Department">
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Rating (1-5)">
+                                        <select name="Overall Rating" class="form-control input-lg" id="job_info">
+                                				<option value = "unspecified">Overall Rating</option>
+									    		<option value="1">1</option>
+									    		<option value="2">2</option>
+									    		<option value="3">3</option>
+									    		<option value="4">4</option>
+									    		<option value="5">5</option>
+  										</select>
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Work study or standard">
+                                        <select name="Work Study or Standard" class="form-control input-lg" id="job_info">
+                                				<option value = "unspecified">Work Study or Standard</option>
+									    		<option value="Work Study">Work Study</option>
+									    		<option value="Standard">Standard</option>
+  										</select>
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Co-worker rating (1-5)">
+                                        <select name="Co-Worker Rating" class="form-control input-lg" id="job_info">
+                                				<option value = "unspecified">Co-Worker Rating</option>
+									    		<option value="1">1</option>
+									    		<option value="2">2</option>
+									    		<option value="3">3</option>
+									    		<option value="4">4</option>
+									    		<option value="5">5</option>
+  										</select>
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
                                         <input class="form-control input-lg" id="job_info" type="text" placeholder="Hours/week">
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Can you do homework? (yes/no)">
-                                </div></div>
+                                		<select name="Can you do homework?" class="form-control input-lg" id="job_info">
+                                				<option value = "unspecified">Can you do homework?</option>
+									    		<option value="yes">yes</option>
+									    		<option value="no">no</option>
+  										</select>
+  								</div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Schedule flexibility (1-5)">
+                                        <select name="Schedule Flexibility" class="form-control input-lg" id="job_info">
+                                				<option value = "unspecified">Schedule Flexibility</option>
+									    		<option value="1">1</option>
+									    		<option value="2">2</option>
+									    		<option value="3">3</option>
+									    		<option value="4">4</option>
+									    		<option value="5">5</option>
+  										</select>
                                 </div></div>
                                 <div class="form-group"><div class="input-group col-lg-13">
                                         <input class="form-control input-lg" id="job_info" type="text" placeholder="Other comments">
                                 </div></div>
+                                <input type="submit" value="Submit">
 			</form>
 		</div>
 	</div>
