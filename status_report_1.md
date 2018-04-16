@@ -38,7 +38,12 @@ were not able to find any. Because of this (and other factors), Job-os will have
 users directly submit listings for the website--similar to ratemyprofessors.
 
 
+
 What are the goals for next week?
 
 By next week, we hope to have a page for job submissions, a start on our
 MongoDB implementation, and a better navigation bar.
+
+# Comments by Ming
+* An idea: how about using posts and data from COMP 199 Piazza to seed your database?  I don't/didn't know of any jobs board APIs out there, forget about good ones.
+* There is an unofficial Piazza API on GitHub: https://www.npmjs.com/package/piazza-api
