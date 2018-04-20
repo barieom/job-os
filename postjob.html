@@ -23,6 +23,7 @@
             });
     	});
     </script>
+    <script src="postjob.js"></script>
 </head>
 <body class="fixed-nav sticky-footer">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
@@ -63,34 +64,34 @@
 	</div>
 	<div class="banner-search-area">
 		<div class="row align-items-center justify-content-center">
-			<form>
+			<form id = "postJob">
 				<div class="form-group"><div class="input-group col-lg-13">
-					<input class="form-control input-lg" id="job_info" type="text" placeholder="Job title">
+					<input class="form-control input-lg" id="jobTitle" type="text" placeholder="Job title" >
 				</div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Department">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Job Description">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <select name="Work Study or Standard" class="form-control input-lg" id="job_info">
-                                				<option value = "unspecified">Work Study or Standard</option>
-									    		<option value="Work Study">Work Study</option>
-									    		<option value="Standard">Standard</option>
-									    		<option value="N/A">N/A</option>
-  										</select>
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="number" placeholder="Hourly Rate" step="1" min="0">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="number" placeholder="Hours/week" step="1" min="0" max="100">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Link to Apply">
-                                </div></div>
-                                <input type="submit" value="Submit">
+         		<div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="department" type="text" placeholder="Department">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="jobDescript" type="text" placeholder="Job Description">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <select name="Work Study or Standard" class="form-control input-lg" id="WSoS">
+                				<option value = "unspecified">Work Study or Standard</option>
+					    		<option value="Work Study">Work Study</option>
+					    		<option value="Standard">Standard</option>
+					    		<option value="N/A">N/A</option>
+						</select>
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="hourlyRate" type="number" placeholder="Hourly Rate" step="1" min="0">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="hoursPerWeek" type="number" placeholder="Hours/week" step="1" min="0" max="100">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="link" type="text" placeholder="Link to Apply">
+                </div></div>
+                <input type="button" value="Submit" onclick="postJobSubmit()">
 			</form>
 		</div>
 	</div>
