@@ -23,6 +23,7 @@
             });
     	});
     </script>
+    <script src="reviewjob.js"></script>
 </head>
 <body class="fixed-nav sticky-footer">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
@@ -63,47 +64,47 @@
 	</div>
 	<div class="banner-search-area">
 		<div class="row align-items-center justify-content-center">
-			<form>
+			<form id="reviewJob">
 				<div class="form-group"><div class="input-group col-lg-13">
-					<input class="form-control input-lg" id="job_info" type="text" placeholder="Job title">
+					<input class="form-control input-lg" id="jobTitle" type="text" placeholder="Job title">
 				</div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Department">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-  										 <input class="form-control input-lg" id="job_info" type="number" placeholder="Overall Rating" step="1" min="1" max = "5">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <select name="Work Study or Standard" class="form-control input-lg" id="job_info">
-                                				<option value = "unspecified">Work Study or Standard</option>
-									    		<option value="Work Study">Work Study</option>
-									    		<option value="Standard">Standard</option>
-									    		<option value="N/A">N/A</option>
-  										</select>
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-  										 <input class="form-control input-lg" id="job_info" type="number" placeholder="Co-Worker Rating" step="1" min="1" max="5">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="number" placeholder="Hourly Rate" step="1" min="0">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="number" placeholder="Hours/week" step="1" min="1" max="100">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                		<select name="Can you do homework?" class="form-control input-lg" id="job_info">
-                                				<option value = "unspecified">Can you do homework?</option>
-									    		<option value="yes">yes</option>
-									    		<option value="no">no</option>
-  										</select>
-  								</div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-  										 <input class="form-control input-lg" id="job_info" type="number" placeholder="Schedule Flexibility" step="1" min="1" max ="5">
-                                </div></div>
-                                <div class="form-group"><div class="input-group col-lg-13">
-                                        <input class="form-control input-lg" id="job_info" type="text" placeholder="Other comments">
-                                </div></div>
-                                <input type="submit" value="Submit">
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="department" type="text" placeholder="Department">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+							 <input class="form-control input-lg" id="overallRating" type="number" placeholder="Overall Rating" step="1" min="1" max = "5">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <select name="Work Study or Standard" class="form-control input-lg" id="WSoS">
+                				<option value = "unspecified">Work Study or Standard</option>
+					    		<option value="Work Study">Work Study</option>
+					    		<option value="Standard">Standard</option>
+					    		<option value="N/A">N/A</option>
+							</select>
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+							 <input class="form-control input-lg" id="CWrating" type="number" placeholder="Co-Worker Rating" step="1" min="1" max="5">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="hourlyRate" type="number" placeholder="Hourly Rate" step="1" min="0">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="hoursPerWeek" type="number" placeholder="Hours/week" step="1" min="1" max="100">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                		<select name="Can you do homework?" class="form-control input-lg" id="doHW">
+                				<option value = "unspecified">Can you do homework?</option>
+					    		<option value="yes">yes</option>
+					    		<option value="no">no</option>
+							</select>
+					</div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+							 <input class="form-control input-lg" id="schedFlex" type="number" placeholder="Schedule Flexibility" step="1" min="1" max ="5">
+                </div></div>
+                <div class="form-group"><div class="input-group col-lg-13">
+                        <input class="form-control input-lg" id="other" type="text" placeholder="Other comments">
+                </div></div>
+                <input type="submit" value="Submit">
 			</form>
 		</div>
 	</div>
