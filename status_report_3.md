@@ -45,3 +45,11 @@ By next week, we plan to have Job-os fully functional. Demo Day is coming up
 and we want to have time to conduct extensive testing! This mostly involves
 handling loose ends on the server side. But many finishing touches will be
 required to make everything work together.
+
+# Comments by Ming
+* Sounds good, sorry for the GitHub to Heroku rabbit hole.
+* "But once we can dynamically add and remove job records" => How is this going?
+* " For example, we converted our
+"Find a Job" search tool into a job listing page. Most universities will not
+have enough on-campus jobs to warrant a search tool. We believe that Job-os
+will be more helpful if it renders all job listings on one page." => Great.
