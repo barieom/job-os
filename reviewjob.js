@@ -17,7 +17,7 @@ function postJobReview(){
 	document.getElementById("CWrating").value = "";
 	document.getElementById("hourlyRate").value = "";
 	document.getElementById("hoursPerWeek").value = "";
-	document.getElementById("doHW").value = "";
+	document.getElementById("doHW").value = "unspecified";
 	document.getElementById("schedFlex").value = "";
 	document.getElementById("other").value = "";
 

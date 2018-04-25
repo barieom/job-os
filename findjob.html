@@ -12,6 +12,7 @@
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_review.css" />
+	<script src="findjob.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script>
     	$(document).ready(function() {
@@ -24,7 +25,7 @@
     	});
     </script>
 </head>
-<body class="fixed-nav sticky-footer">
+<body class="fixed-nav sticky-footer" onload="findJobInit()">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
     	<a class="navbar-brand" href="#">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
@@ -59,11 +60,8 @@
 
 	<div class="center">
 		<h1 style="font-weight:600;">Find a Job</h1>
-                <h3 style="font-weight:200;">As we continue to build our MongoDB database, this page will eventually reflect data stored about jobs on campus. Stay tuned!</h3>
 	</div>
-	<div class="banner-search-area">
-		
-	</div>
+	<div id="AvailJobsl">Loading...</div>
 
 </body>
 </html>
