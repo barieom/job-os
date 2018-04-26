@@ -23,8 +23,9 @@
             });
     	});
     </script>
+    <script src="index.js"></script>
 </head>
-<body class="fixed-nav sticky-footer">
+<body class="fixed-nav sticky-footer" onload="indexInit()">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
     	<a class="navbar-brand" href="#">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
@@ -77,10 +78,8 @@
 				<p>“Glassdoor for on-campus jobs.” Job-os is a unique platform that offers reliable job and internship information to Tufts University students. As a shared platform, everyone is able to contribute to this website with reviews of their on-campus job or internship experience.</p>
 			</div>
 			<div class="span6">
-				<div class="openjobs">Available Jobs
-				</div>
-				<div class="reviewedjobs">Reviewed Jobs
-				</div>
+				<div id="openjobs"> Available Jobs </div>
+				<div id="reviewedjobs">Reviewed Jobs </div>
 			</div>
 		</div>
 	</div>

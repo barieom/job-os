@@ -9,11 +9,12 @@ function findJobInit() {
 
 			avail_jobs = JSON.parse(reqObj);
 			outputString = "";
-			console.log(count);
+
 			for (count = 0; count < avail_jobs.length; count++) {
 				outputString += "<p>" + avail_jobs[count].jobTitle + " " + avail_jobs[count].department + " " + avail_jobs[count].jobDescript + " " + avail_jobs[count].WSoS + " " + avail_jobs[count].hourlyRate + " " + avail_jobs[count].hoursPerWeek + " " + avail_jobs[count].link + "</p>";
 			}
-			outputDiv.innerHTML = outputString;
+
+			outputString.innerHTML = outputString;
 		} 
 	};
 
