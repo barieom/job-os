@@ -42,32 +42,28 @@ function updateMap() {
 	marker.setMap(map);
 }
 
-function findCoords(address, title) {
-	console.log(address);
+function findCoords(address, title, department) {
 	geocoder.geocode({'address': address}, function(results, status) {
 		if(status === 'OK'){
 			latitude  = results[0].geometry.bounds.f;
 			longitude = results[0].geometry.bounds.b;
 			coordinates = [latitude.b, longitude.b]
-			console.log(coordinates);
-			putJobOnMap(coordinates, title);		
+			putJobOnMap(coordinates, title, department);		
 		} else {
 			alert('Geocode was not successful for the following reason: ' + status);
 		}
 	})
 }
 
-function putJobOnMap(coord, title) {
-	console.log(coord);
+function putJobOnMap(coord, title, department) {
 	var jLoc    = new google.maps.LatLng(coord[0], coord[1]);
+	link = "https://job-os.herokuapp.com/reviewInfo?jobTitle="+title;
 	var jMarker = new google.maps.Marker({
 		map: map,
 		position: jLoc,
-		title: title,
+		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ link + ">Reviews</a>",
 		icon: "jobPin.png"
 	});
-
-	console.log(data.jobinfo.jobTitle);
 
 	jMarker.setMap(map);
 	var jInfoWindow = new google.maps.InfoWindow()
@@ -90,7 +86,7 @@ function findJobs() {
 			geocoder   = new google.maps.Geocoder();
 			for(count = 0; count < data.jobinfo.length; count++) {
 				if(data.jobinfo[count].address != undefined) {
-					findCoords(data.jobinfo[count].address, data.jobinfo[count].jobTitle);
+					findCoords(data.jobinfo[count].address, data.jobinfo[count].jobTitle, data.jobinfo[count].department);
 				}
 			}
 		}

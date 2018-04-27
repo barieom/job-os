@@ -5,6 +5,10 @@
 	margin-right:auto;
 }
 
+.markerTitle {
+	font-weight: bold;
+}
+
 html {
 	height: 100%;
 }
