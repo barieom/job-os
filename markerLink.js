@@ -1,9 +1,7 @@
 function markerLinkInit() {
 	var queryString = location.search.split('jobTitle=')[1]
-	console.log(queryString);
 
 	url="https://job-os.herokuapp.com/reviewInfo?jobTitle=" + queryString;
-	console.log(url);
 
 	request = new XMLHttpRequest();
 	request.open("GET", url, true);
@@ -15,17 +13,26 @@ function markerLinkInit() {
 
 			reviews = JSON.parse(reqObj);
 			string = "";
-			console.log(reviews);
+			var rating = 0;
+			var count;
 
 			for (count = 0; count < reviews.length; count++) {
-				string += "<p>" + reviews[count].jobTitle + " " + reviews[count].department + " " + reviews[count].jobDescript + " " + reviews[count].WSoS + " " + reviews[count].hourlyRate + " " + reviews[count].hoursPerWeek + " " + reviews[count].link + "</p>";
+				rating += reviews[count].overallRating;
+				string += "<p>" + reviews[count].jobTitle + " " + reviews[count].department + " " + reviews[count].overallRating + " " + reviews[count].WSoS + " " + reviews[count].CWrating + " " + reviews[count].hourlyRate + " " + reviews[count].hoursPerWeek + " " + reviews[count].doHW + " " + reviews[count].schedFlex + " " + reviews[count].other + "</p>";
 			}
 
-			outputString.innerHTML = string;
+			rating = rating / count;
+			console.log(rating);
+
+			if(string == ""){
+				outputString.innerHTML = "There are no reviews for " + queryString + "<div><a href=reviewjob.html>Be the first to write a review!</a>";
+			} else if(rating == NaN) {
+				outputString.innerHTML = string;
+			} else {
+				outputString.innerHTML = "Overall Rating: " + rating + "<div>" + string;
+			}
 		} 
 	};
 
 	request.send();
-
-	
 }
