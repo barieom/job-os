@@ -11,7 +11,6 @@ function init() {
 
 	infowindow = new google.maps.InfoWindow()
 	map        = new google.maps.Map(document.getElementById("myMap"), myMap);
-	geocoder   = new google.maps.Geocoder();
 
 	getLocation();
 }
@@ -31,7 +30,6 @@ function getLocation() {
 }
 
 function updateMap() {
-	console.log("in updateMap");
 	currentLoc = new google.maps.LatLng(lat, long);
 
 	map.panTo(currentLoc);
@@ -44,16 +42,40 @@ function updateMap() {
 	marker.setMap(map);
 }
 
-function findCoords(address) {
-	var coords;
-	geocoder.geocode({'address' : address}, function(results, status){
-		if(status == 'OK'){
-			coordsObj = results[0].geometry.location;
-			coordinates = [coordsObj.nb, coordsObj.ob]
+function findCoords(address, title) {
+	console.log(address);
+	geocoder.geocode({'address': address}, function(results, status) {
+		if(status === 'OK'){
+			latitude  = results[0].geometry.bounds.f;
+			longitude = results[0].geometry.bounds.b;
+			coordinates = [latitude.b, longitude.b]
+			console.log(coordinates);
+			putJobOnMap(coordinates, title);		
 		} else {
 			alert('Geocode was not successful for the following reason: ' + status);
 		}
 	})
+}
+
+function putJobOnMap(coord, title) {
+	console.log(coord);
+	var jLoc    = new google.maps.LatLng(coord[0], coord[1]);
+	var jMarker = new google.maps.Marker({
+		map: map,
+		position: jLoc,
+		title: title,
+		icon: "jobPin.png"
+	});
+
+	console.log(data.jobinfo.jobTitle);
+
+	jMarker.setMap(map);
+	var jInfoWindow = new google.maps.InfoWindow()
+
+	google.maps.event.addListener(jMarker, 'click', function() {
+		jInfoWindow.setContent(this.title);
+		jInfoWindow.open(map, this);
+	});
 }
 
 
@@ -63,35 +85,15 @@ function findJobs() {
 	request.open("GET", url, true);
 
 	request.onreadystatechange = function() {
-		if (request.readyState == 4 && request.status === 200) {		
+		if (request.readyState == 4 && request.status === 200) {	
 			data = JSON.parse(request.responseText); 
-
-			for(count = 0; count < data.length; count++){
-				if(data[count].address != undefined){
-
-					findCoords(data[count].address);
-					jlat     = coordinates[0];
-					jlong    = coordinates[1];
-					var jLoc = new google.maps.LatLng(jlat, jlong);
-
-					var jMarker = new google.maps.Marker({
-						position: jLoc,
-						title: data.jobTitle,
-						icon: "pin.png"
-					});
-
-					jMarker.setMap(map);
-					var jInfoWindow = new google.maps.InfoWindow()
-
-					google.maps.event.addListener(jMarker, 'click', function() {
-						vInfoWindow.setContent(this.title);
-						vInfoWindow.open(map, this);
-					});
-
+			geocoder   = new google.maps.Geocoder();
+			for(count = 0; count < data.jobinfo.length; count++) {
+				if(data.jobinfo[count].address != undefined) {
+					findCoords(data.jobinfo[count].address, data.jobinfo[count].jobTitle);
 				}
 			}
 		}
-
 		if (request.readyState == 4 && request.status != 200){
 			document.getElementById("myMap").innerHTML = "<p>Something went wrong</p>";
 		}

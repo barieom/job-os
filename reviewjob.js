@@ -22,7 +22,6 @@ function postJobReview(){
 	document.getElementById("other").value = "";
 
 	params = "jobTitle=" + jobTitle + "&department=" + department + "&overallRating=" +  overallRating + "&WSoS=" + WSoS + "&CWrating=" + CWrating + "&hourlyRate=" + hourlyRate + "&hoursPerWeek=" + hoursPerWeek + "&doHW=" + doHW + "&schedFlex=" + schedFlex + "&other=" + other;
-	///update URL to right one
 	url    = "https://job-os.herokuapp.com/postReview";
 
 	request = new XMLHttpRequest();
@@ -30,3 +29,6 @@ function postJobReview(){
 	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	request.send(params);
 }
+
+
+
