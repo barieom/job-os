@@ -57,7 +57,7 @@ function findCoords(address, title, department) {
 
 function putJobOnMap(coord, title, department) {
 	var jLoc    = new google.maps.LatLng(coord[0], coord[1]);
-	link = "https://job-os.herokuapp.com/reviewInfo?jobTitle="+title;
+	link = "markerLink.html?jobTitle="+title;
 	var jMarker = new google.maps.Marker({
 		map: map,
 		position: jLoc,

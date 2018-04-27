@@ -7,12 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_index.css" />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script>
     	$(document).ready(function() {
     		$(":input").keypress(function(e) {
@@ -23,9 +20,9 @@
             });
     	});
     </script>
-    <script src="index.js"></script>
+    <script src="markerLink.js"></script>
 </head>
-<body class="fixed-nav sticky-footer" onload="indexInit()">
+<body class="fixed-nav sticky-footer" onload="markerLinkInit()">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
     	<a class="navbar-brand" href="#">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
@@ -59,29 +56,13 @@
 	</nav>
 
 	<div class="center">
-		<h1 style="font-weight:600;">Find a job or an internship best suited for you.</h1>
-	</div>
-	<div class="banner-search-area">
-		<div class="row align-items-center justify-content-center">
-			<form>
-				<div class="form-group"><div class="input-group col-lg-11">
-					<input class="form-control input-lg" id="job_info" type="text" placeholder="Search me...">
-				</div></div>
-			</form>
-		</div>
+		<h1 style="font-weight:600;">Reviews</h1>
 	</div>
 
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="info span6">
-				<p>About JOB-OS</p>
-				<p>“Glassdoor for on-campus jobs.” Job-os is a unique platform that offers reliable job and internship information to Tufts University students. As a shared platform, everyone is able to contribute to this website with reviews of their on-campus job or internship experience.</p>
-			</div>
-			<div class="span6">
-				<div>Available Jobs</div>
-				<div id="openjobs"> Loading... </div>
-				<div>Reviewed Jobs</div>
-				<div id="reviewedjobs">Loading... </div>
+				<div id = singleReview>Loading Reviews ...</div>
 			</div>
 		</div>
 	</div>

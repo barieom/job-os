@@ -8,13 +8,13 @@ function indexInit() {
 			reqObj = request.responseText;				
 
 			avail_jobs = JSON.parse(reqObj);
-			outputString = "";
+			string = "";
 
 			for (count = 0; count < avail_jobs.length; count++) {
-				outputString += "<p>" + avail_jobs[count].jobTitle + " " + avail_jobs[count].department + " " + avail_jobs[count].jobDescript + " " + avail_jobs[count].WSoS + " " + avail_jobs[count].hourlyRate + " " + avail_jobs[count].hoursPerWeek + " " + avail_jobs[count].link + "</p>";
+				string += "<p>" + avail_jobs[count].jobTitle + " " + avail_jobs[count].department + " " + avail_jobs[count].jobDescript + " " + avail_jobs[count].WSoS + " " + avail_jobs[count].hourlyRate + " " + avail_jobs[count].hoursPerWeek + " " + avail_jobs[count].link + "</p>";
 			}
 
-			outputString.innerHTML = outputString;
+			outputString.innerHTML = string;
 		} 
 	};
 
@@ -29,13 +29,13 @@ function indexInit() {
 			reqObj = request.responseText;				
 
 			reviews = JSON.parse(reqObj);
-			outputString = "";
+			string = "";
 
 			for (count = 0; count < avail_jobs.length; count++) {
-				outputString += "<p>" + reviews[count].jobTitle + " " + reviews[count].department + " " + reviews[count].overallRating + " " + reviews[count].WSoS + " " + reviews[count].CWrating + " " + reviews[count].hourlyRate + " " + reviews[count].hoursPerWeek + " " + reviews[count].doHW + " " + reviews[count].schedFlex + " " + reviews[count].other +"</p>";
+				string += "<p>" + reviews[count].jobTitle + " " + reviews[count].department + " " + reviews[count].overallRating + " " + reviews[count].WSoS + " " + reviews[count].CWrating + " " + reviews[count].hourlyRate + " " + reviews[count].hoursPerWeek + " " + reviews[count].doHW + " " + reviews[count].schedFlex + " " + reviews[count].other +"</p>";
 			}
 
-			outputString.innerHTML = outputString;
+			outputString.innerHTML = string;
 		} 
 	};
 
