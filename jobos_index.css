@@ -43,13 +43,14 @@ html, body {
 
 .banner-search-area {
   padding: 50px;
+  margin-top: -60px;
 }
 
 .platform-description {
   background-color:#F2F2F2;
   border: 2px solid grey;
   border-radius: 3px;
-  padding: 40px;
+  padding: 30px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -57,6 +58,6 @@ html, body {
 .indexImages {
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 0%;
+  margin-bottom: 25%;
 }
