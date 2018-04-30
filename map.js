@@ -58,8 +58,7 @@ function putJobOnMap(coord, title, department) {
 	var jMarker = new google.maps.Marker({
 		map: map,
 		position: coord,
-		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ link + ">Reviews</a>",
-		icon: "jobPin.png"
+		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ link + ">Reviews</a>"
 	});
 
 	jMarker.setMap(map);
