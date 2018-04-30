@@ -22,7 +22,7 @@
     	});
     </script>
 </head>
-<body class="fixed-nav sticky-footer" onload="findJobInit()">
+<body class="fixed-nav sticky-footer" onload="getJobs()">
 	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
     	<a class="navbar-brand" href="index.html">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
@@ -58,7 +58,31 @@
 	<div class="center">
 		<h1 style="font-weight:600;">Find a Job</h1>
 	</div>
-	<div id="AvailJobs">Loading...</div>
-
+	<div class="container">
+	  <div class="row">
+<!-- 	  	<div class="col col-4">
+	  		View Past Reviews
+	  	</div> -->
+	  	<div class="col" >
+	  		View Job Openings
+	  	</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-4">
+	  		Job Title
+	  	</div>
+	  	<div class="col-8">
+	  		Job Info
+	  	</div>
+	  </div>
+	  <div class="row">
+<!-- 	    <div class="col col-4 white_box" id="reviewedjobs">
+	      
+	    </div> -->
+	    <div class="col  white_box" id="openjobs">
+	      
+	    </div>
+	</div>
 </body>
+
 </html>
