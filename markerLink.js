@@ -16,13 +16,13 @@ function markerLinkInit() {
 			var rating = 0;
 			var count;
 
-			for (count = 0; count < reviews.length; count++) {
-				rating += reviews[count].overallRating;
-				string += "<p>" + reviews[count].jobTitle + " " + reviews[count].department + " " + reviews[count].overallRating + " " + reviews[count].WSoS + " " + reviews[count].CWrating + " " + reviews[count].hourlyRate + " " + reviews[count].hoursPerWeek + " " + reviews[count].doHW + " " + reviews[count].schedFlex + " " + reviews[count].other + "</p>";
+			for (count = 0; count < reviews.reviews.length; count++) {
+				rating += reviews.reviews[count].overallRating;
+				reviewNum = count + 1;
+				string += "<p>Review " + reviewNum + ":<div>" + reviews.reviews[count].jobTitle + "<div>Department: " + reviews.reviews[count].department + "<div>Overall Rating: " + reviews.reviews[count].overallRating + "<div> Work Study or Standard: " + reviews.reviews[count].WSoS + "<div>Co-Worker Rating: " + reviews.reviews[count].CWrating + "<div>Hourly Rate: " + reviews.reviews[count].hourlyRate + "<div>Hours Per Week: " + reviews.reviews[count].hoursPerWeek + "<div>Can you do homework on the job? " + reviews.reviews[count].doHW + "<div>Schedule Flexibility: " + reviews.reviews[count].schedFlex + "<div>Other: " + reviews.reviews[count].other + "</p>";
 			}
 
 			rating = rating / count;
-			console.log(rating);
 
 			if(string == ""){
 				outputString.innerHTML = "There are no reviews for " + queryString + "<div><a href=reviewjob.html>Be the first to write a review!</a>";

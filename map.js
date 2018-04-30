@@ -45,9 +45,7 @@ function updateMap() {
 function findCoords(address, title, department) {
 	geocoder.geocode({'address': address}, function(results, status) {
 		if(status === 'OK'){
-			latitude  = results[0].geometry.bounds.f;
-			longitude = results[0].geometry.bounds.b;
-			coordinates = [latitude.b, longitude.b]
+			coordinates  = results[0].geometry.location;	
 			putJobOnMap(coordinates, title, department);		
 		} else {
 			alert('Geocode was not successful for the following reason: ' + status);
@@ -56,11 +54,10 @@ function findCoords(address, title, department) {
 }
 
 function putJobOnMap(coord, title, department) {
-	var jLoc    = new google.maps.LatLng(coord[0], coord[1]);
 	link = "markerLink.html?jobTitle="+title;
 	var jMarker = new google.maps.Marker({
 		map: map,
-		position: jLoc,
+		position: coord,
 		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ link + ">Reviews</a>",
 		icon: "jobPin.png"
 	});
