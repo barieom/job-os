@@ -45,3 +45,51 @@ h3 {
     width: 100%;
     z-index: 0;
 }
+
+.white_box {
+  background-color: #FFF;
+  border: 2px solid grey;
+  border-radius: 3px;
+  padding: 0px;
+}
+.left_box {
+  background-color: #FFF;
+  border: 2px solid grey;
+  border-radius: 3px;
+  padding: 0px;
+  border-right:0px;
+}
+.right_box {
+  background-color: #FFF;
+  border: 2px solid grey;
+  border-radius: 3px;
+  padding: 0px;
+  border-left:0px;
+}
+
+
+.bg_grey {
+  background-color:#F2F2F2;
+  padding:3px;
+}
+
+.bg_white {
+  padding:3px;
+}
+
+.no_margin {
+  margin:0px;
+}
+
+a.fill-div {
+  color: #000;
+  font-size: 1.03em;
+}
+
+.black_text {
+  color:#000;
+}
+
+.job_title {
+  font-size:1.1em;
+}
