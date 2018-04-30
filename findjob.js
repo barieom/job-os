@@ -13,7 +13,7 @@ function getJobs() {
 			for (count = 0; count < avail_jobs.jobinfo.length; count++) {
 				var title = avail_jobs.jobinfo[count].jobTitle;	
 				var WSoS = avail_jobs.jobinfo[count].WSoS;
-				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title;
+				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(" ", "%20");
 				
 				if (WSoS == "Work Study") { WSoS = "Yes"}
 				else if (WSoS == "N/A" || WSoS == "Standard") {WSoS = "Standard"};
@@ -30,29 +30,4 @@ function getJobs() {
 
 	request1.send();
 
-	// var request2 = new XMLHttpRequest();
-	// request2.open("GET", "https://job-os.herokuapp.com/allReviewInfo", true);
-
-	// request2.onreadystatechange = function() {
-	// 	if (request2.readyState == 4 && request2.status == 200) {
-	// 		outputString = document.getElementById("reviewedjobs");
-	// 		reqObj = request2.responseText;				
-
-	// 		reviews = JSON.parse(reqObj);
-	// 		string = "";
-
-	// 		for (count = 0; count < reviews.reviews.length; count++) {
-	// 			var title = avail_jobs.jobinfo[count].jobTitle;				
-	// 			if (count%2==0) {
-	// 				string += "<div class='bg_grey fill-div'><a href='https://job-os.herokuapp.com/markerLink.html?jobTitle='" + title + "'/>" + "<div class='black_text'>" + "<p class='no_margin'> Job Title: " + title + "</p><p class='no_margin'> Department: " + avail_jobs.jobinfo[count].department + "</p> <p class='no_margin'> Hourly Rate: " + avail_jobs.jobinfo[count].hourlyRate +  "</p>"+ "</div></div>";
-	// 			} else {
-	// 				string += "<div class='bg_white fill-div'><a href='https://job-os.herokuapp.com/markerLink.html?jobTitle='" + title + "'/>" + "<div class='black_text'>" + "<p class='no_margin'> Job Title: " + title + "</p><p class='no_margin'> Department: " + avail_jobs.jobinfo[count].department + "</p> <p class='no_margin'> Hourly Rate: " + avail_jobs.jobinfo[count].hourlyRate +  "</p>"+ "</div></div>";
-	// 			}			
-	// 		}
-
-	// 		outputString.innerHTML = string;
-	// 	} 
-	// };
-
-	// request2.send();
 }
