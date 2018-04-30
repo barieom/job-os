@@ -3,7 +3,6 @@ function markerLinkInit() {
 	job =  queryString.replace(/%20/g, " ");
 
 	url = "https://job-os.herokuapp.com/reviewInfo?jobTitle=" + queryString;
-	console.log(url);
 
 	request = new XMLHttpRequest();
 	request.open("GET", url, true);

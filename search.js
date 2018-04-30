@@ -1,5 +1,6 @@
 function searchBox() {
 	console.log("in search box");
+	
 	//search = document.getElementById("mySearc").value;
 	//console.log(search);
 

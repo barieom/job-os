@@ -14,11 +14,10 @@ function postJobSubmit() {
 	document.getElementById("WSoS").value         = "unspecified";
 	document.getElementById("hourlyRate").value   = "";
 	document.getElementById("hoursPerWeek").value = "";
-	document.getElementById("address").value = "";
+	document.getElementById("address").value      = "";
 	document.getElementById("link").value         = "";
 
 	params = "jobTitle=" + jobTitle + "&department=" + department + "&jobDescript=" +  jobDescript + "&WSoS=" + WSoS + "&hourlyRate=" + hourlyRate + "&hoursPerWeek=" + hoursPerWeek + "&address=" + address + "&link=" + link;
-	// update URL to right one
 	url    = "https://job-os.herokuapp.com/postJob";
 
 	request = new XMLHttpRequest();
