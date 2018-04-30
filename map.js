@@ -55,10 +55,12 @@ function findCoords(address, title, department) {
 
 function putJobOnMap(coord, title, department) {
 	link = "markerLink.html?jobTitle="+title;
+	url =  link.replace(/ /g, "%20");
+
 	var jMarker = new google.maps.Marker({
 		map: map,
 		position: coord,
-		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ link + ">Reviews</a>"
+		title: "<b>" + title + "</b><div>" + department + "<div><a href="+ url + ">Reviews</a>"
 	});
 
 	jMarker.setMap(map);
@@ -69,7 +71,6 @@ function putJobOnMap(coord, title, department) {
 		jInfoWindow.open(map, this);
 	});
 }
-
 
 function findJobs() {
 	url     = "https://job-os.herokuapp.com/jobInfo";
