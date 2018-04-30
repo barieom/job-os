@@ -10,6 +10,7 @@
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_index.css" />
+	<link rel="stylesheet" href="jobos_review.css"/>
     <script src="index.js"></script>
     <script src="search.js"></script>
 </head>
@@ -80,10 +81,13 @@
 				<p>“Glassdoor for on-campus jobs.” Job-os is a unique platform that offers reliable job and internship information to Tufts University students. As a shared platform, everyone is able to contribute to this website with reviews of their on-campus job or internship experience.</p>
 			</div>
 			<div class="span6">
-				<div>Available Jobs</div>
-				<div id="openjobs"> Loading... </div>
-				<div>Reviewed Jobs</div>
-				<div id="reviewedjobs">Loading... </div>
+				<div class="row">
+					<div class="col">Available Jobs</div><div class="col">Reviewed Jobs</div>
+				</div>
+				<div class="row">
+					<div class="col white_box" id="openjobs"> Loading...</div>
+					<div class="col white_box" id="reviewedjobs">Loading... </div>
+				</div>
 			</div>
 		</div>
 	</div>

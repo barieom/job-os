@@ -11,7 +11,19 @@ function indexInit() {
 			string = "";
 
 			for (count = 0; count < avail_jobs.jobinfo.length; count++) {
-				string += "<p>" + avail_jobs.jobinfo[count].jobTitle + " " + avail_jobs.jobinfo[count].department + " " + avail_jobs.jobinfo[count].jobDescript + " " + avail_jobs.jobinfo[count].WSoS + " " + avail_jobs.jobinfo[count].hourlyRate + " " + avail_jobs.jobinfo[count].hoursPerWeek + " " + avail_jobs.jobinfo[count].link + "</p>";
+				var title = avail_jobs.jobinfo[count].jobTitle;	
+				var WSoS = avail_jobs.jobinfo[count].WSoS;
+				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/ /g, "%20");
+				
+				if (WSoS == "Work Study") { WSoS = "Yes"}
+				else if (WSoS == "N/A" || WSoS == "Standard") {WSoS = "Standard"};
+
+				if (count%2==0) {
+					string += "<div class='bg_grey fill-div'><a href=" + url + ">" + "<div class='black_text row'>" + "<div class='job_title no_margin col-4'>" + title + "</div><div class='col-8 no_margin'> Affiliation: " + avail_jobs.jobinfo[count].department + "<br> Hourly Rate: " + avail_jobs.jobinfo[count].hourlyRate + "<br> Work Study: " + WSoS + "</div></div></div>";
+				} else {
+					string += "<div class='bg_white fill-div'><a href=" + url + ">" + "<div class='black_text row'>" + "<div class='job_title no_margin col-4'>" + title + "</div><div class='col-8 no_margin'> Affiliation: " + avail_jobs.jobinfo[count].department + "<br> Hourly Rate: " + avail_jobs.jobinfo[count].hourlyRate + "<br> Work Study: " + WSoS + "</div></div></div>";
+				}
+				// string += "<p>" + avail_jobs.jobinfo[count].jobTitle + " " + avail_jobs.jobinfo[count].department + " " + avail_jobs.jobinfo[count].jobDescript + " " + avail_jobs.jobinfo[count].WSoS + " " + avail_jobs.jobinfo[count].hourlyRate + " " + avail_jobs.jobinfo[count].hoursPerWeek + " " + avail_jobs.jobinfo[count].link + "</p>";
 			}
 
 			outputString.innerHTML = string;
@@ -32,7 +44,19 @@ function indexInit() {
 			string = "";
 
 			for (count = 0; count < reviews.reviews.length; count++) {
-				string += "<p>" + reviews.reviews[count].jobTitle + " " + reviews.reviews[count].department + " " + reviews.reviews[count].overallRating + " " + reviews.reviews[count].WSoS + " " + reviews.reviews[count].CWrating + " " + reviews.reviews[count].hourlyRate + " " + reviews.reviews[count].hoursPerWeek + " " + reviews.reviews[count].doHW + " " + reviews.reviews[count].schedFlex + " " + reviews.reviews[count].other +"</p>";
+				var title = reviews.reviews[count].jobTitle;	
+				var WSoS = reviews.reviews[count].WSoS;
+				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/ /g, "%20");
+				
+				if (WSoS == "Work Study") { WSoS = "Yes"}
+				else if (WSoS == "N/A" || WSoS == "Standard") {WSoS = "Standard"};
+
+				if (count%2==0) {
+					string += "<div class='bg_grey fill-div'><a href=" + url + ">" + "<div class='black_text row'>" + "<div class='job_title no_margin col-4'>" + title + "</div><div class='col-8 no_margin'> Affiliation: " + reviews.reviews[count].department + "<br> Hourly Rate: " + reviews.reviews[count].hourlyRate + "<br> Work Study: " + WSoS + "</div></div></div>";
+				} else {
+					string += "<div class='bg_white fill-div'><a href=" + url + ">" + "<div class='black_text row'>" + "<div class='job_title no_margin col-4'>" + title + "</div><div class='col-8 no_margin'> Affiliation: " + reviews.reviews[count].department + "<br> Hourly Rate: " + reviews.reviews[count].hourlyRate + "<br> Work Study: " + WSoS + "</div></div></div>";
+				}
+				// string += "<p>" + reviews.reviews[count].jobTitle + " " + reviews.reviews[count].department + " " + reviews.reviews[count].overallRating + " " + reviews.reviews[count].WSoS + " " + reviews.reviews[count].CWrating + " " + reviews.reviews[count].hourlyRate + " " + reviews.reviews[count].hoursPerWeek + " " + reviews.reviews[count].doHW + " " + reviews.reviews[count].schedFlex + " " + reviews.reviews[count].other +"</p>";
 			}
 
 			outputString.innerHTML = string;
