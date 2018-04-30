@@ -40,3 +40,23 @@ html, body {
     width: 100%;
     z-index: 0;
 }
+
+.banner-search-area {
+  padding: 50px;
+}
+
+.platform-description {
+  background-color:#F2F2F2;
+  border: 2px solid grey;
+  border-radius: 3px;
+  padding: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.indexImages {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

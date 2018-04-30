@@ -18,7 +18,7 @@ function markerLinkInit() {
 			var count;
 
 			for (count = 0; count < reviews.reviews.length; count++) {
-				rating += reviews.reviews[count].overallRating;
+				rating += parseFloat(reviews.reviews[count].overallRating);
 				reviewNum = count + 1;
 				string += "<p>Review " + reviewNum + ":<div>" + reviews.reviews[count].jobTitle + "<div>Department: " + reviews.reviews[count].department + "<div>Overall Rating: " + reviews.reviews[count].overallRating + "<div> Work Study or Standard: " + reviews.reviews[count].WSoS + "<div>Co-Worker Rating: " + reviews.reviews[count].CWrating + "<div>Hourly Rate: " + reviews.reviews[count].hourlyRate + "<div>Hours Per Week: " + reviews.reviews[count].hoursPerWeek + "<div>Can you do homework on the job? " + reviews.reviews[count].doHW + "<div>Schedule Flexibility: " + reviews.reviews[count].schedFlex + "<div>Other: " + reviews.reviews[count].other + "</p>";
 			}
