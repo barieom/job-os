@@ -33,6 +33,12 @@ function getReviews() {
 
 			rating = rating / count;
 
+			//https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450
+  			const starPercentage = rating / 5  * 100;
+  			console.log(starPercentage);
+  			const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+ 			document.querySelector(`.stars-inner`).style.width = starPercentageRounded; 
+
 			if(string == "" || string == undefined || string == null) {
 				outputString.innerHTML = "There are no reviews for " + queryString + "<div><a href=reviewjob.html>Be the first to write a review!</a>";
 			} else if (rating == NaN) {
