@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="jobos_index.css" />
 	<link rel="stylesheet" href="jobos_review.css"/>
@@ -22,8 +22,8 @@
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
 		</a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-  			<span class="navbar-toggler-icon"></span>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  			<img class="navbar-toggler-icon" src="hamburger.png">
    		</button>
 
 		<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -49,26 +49,11 @@
 			</ul>
 		    <form class="searchForm" action="search.html" method="GET">
 			    <input class="form-control mr-sm-2" id="searchItem" type="text" placeholder="Search for jobs..." aria-label="Search" name="searchItem">
-			    <button type = "submit" class="btn btn-outline-success my-2 my-sm-0 searchtext"> <i class="fa fa-search"></i></button>
 			</form>
 		</div>
 	</nav>
 
-    <script>
-    	$(document).ready(function() {
-    		$(":input").keypress(function(e) {
-    			if (e.which == 13) {
-    				console.log("HERE I AM");
-                    var value = $( this ).val();
-                    console.log(value);
-                    var url = "search.html?searchVal=" + value;
-                    $(location).attr('href',url);
-                }
-            });
-    	});
-    </script>
-
-	<div class="center">
+	<div class="center" id="indexTitle">
 		<h1 style="font-weight:600;">JOB-OS</h1>
 	</div>
 
@@ -94,10 +79,9 @@
 		</div>
 	</div>
 
-
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span6">
+			<div class="span6" class="indexBottom">
 				<div class="row">
 					<div class="col">Available Jobs</div><div class="col">Reviewed Jobs</div>
 				</div>

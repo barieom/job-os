@@ -26,7 +26,6 @@ function markerLinkInit() {
 			rating = rating / count;
  
 			//https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450
-
   			const starPercentage = rating / 5  * 100;
   			console.log(starPercentage);
   			const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
