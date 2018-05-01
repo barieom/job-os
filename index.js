@@ -64,11 +64,3 @@ function indexInit() {
 
 	request2.send();
 }
-
-
-
-
-
-
-
-

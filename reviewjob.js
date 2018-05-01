@@ -29,6 +29,3 @@ function postJobReview(){
 	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	request.send(params);
 }
-
-
-

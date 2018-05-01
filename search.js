@@ -33,9 +33,7 @@ function getReviews() {
 
 			rating = rating / count;
 
-			//https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450
   			const starPercentage = rating / 5  * 100;
-  			console.log(starPercentage);
   			const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
  			document.querySelector(`.stars-inner`).style.width = starPercentageRounded; 
 
@@ -77,7 +75,6 @@ function getOpening(){
 			for (count = 0; count < avail_jobs.jobinfo.length; count++) {
 				var title = avail_jobs.jobinfo[count].jobTitle;	
 				var WSoS = avail_jobs.jobinfo[count].WSoS;
-				// var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/%20/g, " ");
 				if (WSoS == "Work Study") { WSoS = "Yes"}
 				else if (WSoS == "N/A" || WSoS == "Standard" || WSoS == NaN) {WSoS = "Standard"};
 				if (count%2==0) {
@@ -92,6 +89,3 @@ function getOpening(){
 
 	request2.send();
 }
-
-
-
