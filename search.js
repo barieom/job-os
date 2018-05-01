@@ -4,7 +4,10 @@ function getReviews() {
 	} else {
 		var queryString = location.search.split('jobTitle=')[1]
 	}
+
+	queryString =  queryString.replace(/[-\/\\^$*+?.|[\]{}]/g, "%20");
 	url = "https://job-os.herokuapp.com/reviewInfo?jobTitle=" + queryString;
+	queryString =  queryString.replace(/%20/g, " ");
 
 	request = new XMLHttpRequest();
 	request.open("GET", url, true);
@@ -57,7 +60,9 @@ function getOpening(){
 		var queryString = location.search.split('jobTitle=')[1]
 	}
 
+	queryString =  queryString.replace(/[-\/\\^$*+?.|[\]{}]/g, "%20");
 	url2 = "https://job-os.herokuapp.com/oneJobInfo?jobTitle=" + queryString;
+	queryString =  queryString.replace(/%20/g, " ");
 
 	request2 = new XMLHttpRequest();
 	request2.open("GET", url2, true);
