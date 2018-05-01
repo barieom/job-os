@@ -16,6 +16,15 @@ h3 {
 	color: #F0AEDE;
 }
 
+.job_font {
+  font-family: 'Gugi', cursive;
+  font-weight:600;
+}
+
+.info_font {
+  font-weight:300;
+}
+
 .nav_word {
 	color:white;
 	font-weight: bold;
@@ -51,6 +60,16 @@ h3 {
   border: 2px solid grey;
   border-radius: 3px;
   padding: 0px;
+  margin-bottom: 15%;
+}
+
+.job_info_box {
+  background-color: #FFF;
+  border: 2px solid grey;
+  border-radius: 3px;
+  padding: 0px;
+  margin-bottom: 15%;
+  margin:5px;
 }
 
 .bg_grey {

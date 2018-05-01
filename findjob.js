@@ -13,8 +13,10 @@ function getJobs() {
 			for (count = 0; count < avail_jobs.jobinfo.length; count++) {
 				var title = avail_jobs.jobinfo[count].jobTitle;	
 				var WSoS = avail_jobs.jobinfo[count].WSoS;
-				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/ /g, "%20");
+				// var url = "https://job-os.herokuapp.com/search.html?jobTitle="+title.replace(/ /g, "%20");
+				var url = "search.html?jobTitle="+title.replace(/ /g, "%20");
 				
+
 				if (WSoS == "Work Study") { WSoS = "Yes"}
 				else if (WSoS == "N/A" || WSoS == "Standard") {WSoS = "Standard"};
 
