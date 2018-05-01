@@ -64,14 +64,7 @@ h3 {
   margin-bottom: 15%;
 }
 
-.job_info_box {
-  background-color: #FFF;
-  border: 2px solid grey;
-  border-radius: 3px;
-  padding: 0px;
-  margin-bottom: 5%;
-  margin-left:10%; margin-right:10%;
-}
+
 
 .inbox_jt {
   padding-top: 20%;
@@ -105,4 +98,30 @@ a.fill-div {
 
 .job_title {
   font-size:1.1em;
+}
+
+
+
+
+@media only screen and (min-width: 575px){
+  .job_info_box {
+    background-color: #FFF;
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding: 0px;
+    margin-bottom: 5%;
+    margin-left:10%; margin-right:10%;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .job_info_box_sm {
+    background-color: #FFF;
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding: 0px;
+    margin-bottom: 5%;
+    margin-left:0%; margin-right:0%;
+    word-wrap: break-word; 
+  }
 }

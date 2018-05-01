@@ -97,7 +97,9 @@ html, body {
 @media only screen and (min-width: 575px){
   .navbar-toggle {
     display: none!important;
-
+  }
+  .no-disp-wsm {
+    display: none!important;
   }
 }
 
@@ -108,5 +110,14 @@ html, body {
 
   .platform-description {
     display: none!important;
+  }
+
+  .no-disp-wbg {
+    display: none!important;
+  }
+
+  .wrap-word {
+    word-wrap: break-word; 
+    padding-right:0px;
   }
 }
