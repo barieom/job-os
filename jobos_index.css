@@ -70,7 +70,7 @@ html, body {
 
 .stars-outer::before {
   content: "\f006 \f006 \f006 \f006 \f006";
-  margin-left: 114%;
+  margin-left: 166%;
 }
 
 .stars-inner {
@@ -80,7 +80,7 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  margin-left: 114%;
+  margin-left: 166%;
 }
 
 .stars-inner::before {
