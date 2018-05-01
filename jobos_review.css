@@ -122,5 +122,6 @@ a.fill-div {
     padding: 0px;
     margin-bottom: 5%;
     margin-left:0%; margin-right:0%;
+    word-wrap: break-word; 
   }
 }

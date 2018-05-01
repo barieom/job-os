@@ -98,6 +98,9 @@ html, body {
   .navbar-toggle {
     display: none!important;
   }
+  .no-disp-wsm {
+    display: none!important;
+  }
 }
 
 @media only screen and (max-width: 575px){
@@ -109,7 +112,12 @@ html, body {
     display: none!important;
   }
 
-  .no-disp {
+  .no-disp-wbg {
     display: none!important;
+  }
+
+  .wrap-word {
+    word-wrap: break-word; 
+    padding-right:0px;
   }
 }
