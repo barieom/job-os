@@ -97,7 +97,6 @@ html, body {
 @media only screen and (min-width: 575px){
   .navbar-toggle {
     display: none!important;
-
   }
 }
 
@@ -107,6 +106,10 @@ html, body {
   }
 
   .platform-description {
+    display: none!important;
+  }
+
+  .no-disp {
     display: none!important;
   }
 }
