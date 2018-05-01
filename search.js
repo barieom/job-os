@@ -24,7 +24,11 @@ function getReviews() {
 			for (count = 0; count < reviews.reviews.length; count++) {
 				rating += parseFloat(reviews.reviews[count].overallRating);
 				reviewNum = count + 1;
-				string += "<p>Review " + reviewNum + ":<div>" + reviews.reviews[count].jobTitle + "<div>Department: " + reviews.reviews[count].department + "<div>Overall Rating: " + reviews.reviews[count].overallRating + "<div> Work Study or Standard: " + reviews.reviews[count].WSoS + "<div>Co-Worker Rating: " + reviews.reviews[count].CWrating + "<div>Hourly Rate: " + reviews.reviews[count].hourlyRate + "<div>Hours Per Week: " + reviews.reviews[count].hoursPerWeek + "<div>Can you do homework on the job? " + reviews.reviews[count].doHW + "<div>Schedule Flexibility: " + reviews.reviews[count].schedFlex + "<div>Comment: " + reviews.reviews[count].other + "</p>";
+				var WSoS = reviews.reviews[count].WSoS;
+				if (WSoS == "Work Study") { WSoS = "Yes"}
+				else if (WSoS == "N/A" || WSoS == "Standard" || WSoS == NaN) {WSoS = "Standard"};
+				string += "<div class='info_font row '>" + "Review Number " + reviewNum + "</div>";
+				string += "<div class='job_info_box fill-div black_text row'>" + "<div class='job_title no_margin col-4 inbox_jt'>Job Rating: " + reviews.reviews[count].overallRating + "</div><div class='col-8 no_margin'> <table class='table'> <tbody> <tr> <td> Co-worker Rating: </td><td>" +reviews.reviews[count].department+"</td>" + "</tr><tr><td>Hourly Rate: </td>" + "<td>" + reviews.reviews[count].hourlyRate + "</td></tr><tr><td> Work Study:</td><td>" + WSoS + "</td></tr><tr> <td> Hours Per Week: </td><td>" +reviews.reviews[count].hoursPerWeek +"</td></tr><tr> <td> Do Homework During Work?: </td><td>" +reviews.reviews[count].doHW +"</td></tr><tr> <td> Schedule Flexibility: </td><td>" +reviews.reviews[count].schedFlex +"</td></tr><tr> <td> Comments: </td><td>" + reviews.reviews[count].other + "</td></tr>" + "</tbody></table></div></div>";
 			}
 
 			rating = rating / count;
@@ -34,7 +38,7 @@ function getReviews() {
 			} else if (rating == NaN) {
 				outputString.innerHTML = string;
 			} else {
-				outputString.innerHTML = "Overall Rating: " + rating + "<div>" + string;
+				outputString.innerHTML = "<div class='row info_font'>Overall Rating of the Job: " + rating + "</div>" + string;
 			}
 		} 
 	};
@@ -67,12 +71,12 @@ function getOpening(){
 			for (count = 0; count < avail_jobs.jobinfo.length; count++) {
 				var title = avail_jobs.jobinfo[count].jobTitle;	
 				var WSoS = avail_jobs.jobinfo[count].WSoS;
-				var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/%20/g, " ");
+				// var url = "https://job-os.herokuapp.com/markerLink.html?jobTitle="+title.replace(/%20/g, " ");
 				if (WSoS == "Work Study") { WSoS = "Yes"}
 				else if (WSoS == "N/A" || WSoS == "Standard" || WSoS == NaN) {WSoS = "Standard"};
 				if (count%2==0) {
 					string += "<div class='row info_font'>" + " Job Details " + "</div>";
-					string += "<div class='job_info_box fill-div black_text row'>" + "<div class='job_title no_margin col-4'>" + title + "</div><div class='col-8 no_margin'> <table class='table'> <tbody> <tr> <td> Affiliation: </td><td>" +avail_jobs.jobinfo[count].department+"</td>" + "</tr><tr><td>Hourly Rate: </td>" + "<td>" + avail_jobs.jobinfo[count].hourlyRate + "</td></tr><tr><td> Work Study:</td><td>" + WSoS + "</td></tr><tr> <td> Hours Per Week: </td><td>" +avail_jobs.jobinfo[count].hoursPerWeek +"</td></tr><tr> <td> Address: </td><td>" +avail_jobs.jobinfo[count].address +"</td></tr><tr> <td> Job Description: </td><td>" +avail_jobs.jobinfo[count].jobDescript +"</td></tr><tr> <td> Link to Apply: </td><td>" + avail_jobs.jobinfo[count].link + "</td></tr>" + "</tbody></table></div></div>";
+					string += "<div class='job_info_box fill-div black_text row'>" + "<div class='job_title no_margin col-4 inbox_jt'>" + title + "</div><div class='col-8 no_margin'> <table class='table'> <tbody> <tr> <td> Affiliation: </td><td>" +avail_jobs.jobinfo[count].department+"</td>" + "</tr><tr><td>Hourly Rate: </td>" + "<td>" + avail_jobs.jobinfo[count].hourlyRate + "</td></tr><tr><td> Work Study:</td><td>" + WSoS + "</td></tr><tr> <td> Hours Per Week: </td><td>" +avail_jobs.jobinfo[count].hoursPerWeek +"</td></tr><tr> <td> Address: </td><td>" +avail_jobs.jobinfo[count].address +"</td></tr><tr> <td> Job Description: </td><td>" +avail_jobs.jobinfo[count].jobDescript +"</td></tr><tr> <td> Link to Apply: </td><td>" + avail_jobs.jobinfo[count].link + "</td></tr>" + "</tbody></table></div></div>";
 				}
 			}
 

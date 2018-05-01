@@ -22,7 +22,8 @@ h3 {
 }
 
 .info_font {
-  font-weight:300;
+  font-weight:1.5em;
+  margin-left:10%;
 }
 
 .nav_word {
@@ -68,8 +69,16 @@ h3 {
   border: 2px solid grey;
   border-radius: 3px;
   padding: 0px;
-  margin-bottom: 15%;
-  margin:5px;
+  margin-bottom: 5%;
+  margin-left:10%; margin-right:10%;
+}
+
+.inbox_jt {
+  padding-top: 20%;
+}
+
+.review_font {
+  font-size: 2rem;
 }
 
 .bg_grey {
