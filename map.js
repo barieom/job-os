@@ -54,7 +54,7 @@ function findCoords(address, title, department) {
 }
 
 function putJobOnMap(coord, title, department) {
-	link = "markerLink.html?jobTitle="+title;
+	link = "search.html?jobTitle="+title;
 	url =  link.replace(/ /g, "%20");
 
 	var jMarker = new google.maps.Marker({
