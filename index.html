@@ -4,7 +4,7 @@
 	<link rel="shortcut icon" href="images/jobos_b.png">
 	<title>Job-os: Find jobs!</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,15 +14,22 @@
     <script src="index.js"></script>
     <script src="search.js"></script>
 </head>
-<body class="fixed-nav sticky-footer" onload="indexInit()">
-	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
-    	<a class="navbar-brand" href="index.html">
+
+
+<body onload="indexInit()">
+	<nav class="navbar fixed-top navbar-expand-sm navbar-primary bg-dark" class="fixed-nav sticky-footer">
+		<a class="navbar-brand" href="index.html">
 			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
 		</a>
-		<div class="collapse navbar-collapse .nav > ul > li" id="navbarSupportedContent">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  			<span class="navbar-toggler-icon"></span>
+   		</button>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto nav_word">
       			<li class="nav-item active">
-		 			<a class="nav-link nav_word">JOB-OS</a> 
+		 			<a class="nav-link nav_word">JOB-OS</a>
 		 		</li>
 		 		<li class="nav-item">
 	      			<a class="nav-link nav_word" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -75,7 +82,7 @@
 
 	<div class="row">
 		<div class = "col">
-			<img class="indexImages" src="Tufts_University_Seal.png" > 
+			<img class="indexImages" src="Tufts_University_seal.png" > 
 		</div>
 		<div class = "col">
 			<p class = "platform-description">
