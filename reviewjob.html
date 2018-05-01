@@ -7,52 +7,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="jobos_review.css" />
-    <script>
-    	$(document).ready(function() {
-    		$(":input").keypress(function(e) {
-    			if (e.which == 13) {
-                    var value = $( this ).val();
-                    console.log(value);
-                }
-            });
-    	});
-    </script>
+	<link rel="stylesheet" href="jobos_review.css">
+    <link rel="stylesheet" href="jobos_index.css">
     <script src="reviewjob.js"></script>
 </head>
 <body class="fixed-nav sticky-footer">
-	<nav class="navbar navbar-expand-sm navbar-primary bg-dark">
-    	<a class="navbar-brand" href="index.html">
-			<img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
-		</a>
-		<div class="collapse navbar-collapse .nav > ul > li" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto nav_word">
-      			<li class="nav-item active">
-		 			<a class="nav-link nav_word">JOB-OS</a> 
-                        </li>
-                        <li class="nav-item">
-	      			<a class="nav-link nav_word" href="index.html">Home <span class="sr-only">(current)</span></a>
-	      		</li>
-	     		<li class="nav-item">
-                                <a class="nav-link nav_word" href="findjob.html">Find a Job</a>
-                        </li>
-                        <li class="nav-item">
-                                <a class="nav-item nav-link nav_word" href="map.html">Map</a>
-                        </li>
-                        <li class="nav-item">
-                                <a class=" nav-link nav_word" href="reviewjob.html">Submit a Review</a>
-                        </li>
-                        <li class="nav-item">
-                                <a class="nav-link nav_word" href="postjob.html">List a Job</a>
-                        </li>
-			</ul>
-		    <form class="searchForm" action="search.html" method="GET">
-			    <input class="form-control mr-sm-2" id="searchItem" type="text" placeholder="Search for jobs..." aria-label="Search" name="searchItem">
-			</form>
-		</div>
-	</nav>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-primary bg-dark" class="fixed-nav sticky-footer">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/jobos_w.png" width="30" height="45" class="d-inline-block align-top" alt=""/> 
+        </a>
+
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-icon" src="hamburger.png">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto nav_word">
+                <li class="nav-item active">
+                    <a class="nav-link nav_word">JOB-OS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_word" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_word" href="findjob.html">Find a Job</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link nav_word" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link nav_word" href="reviewjob.html">Submit a Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_word" href="postjob.html">List a Job</a>
+                </li>
+            </ul>
+            <form class="searchForm" action="search.html" method="GET">
+                <input class="form-control mr-sm-2" id="searchItem" type="text" placeholder="Search for jobs..." aria-label="Search" name="searchItem">
+            </form>
+        </div>
+    </nav>
 
 	<div class="center">
 		<h1 style="font-weight:600;">Submit a Review</h1>
